@@ -1,0 +1,41 @@
+﻿@model List<Crm.EntityLayer.Concrete.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_CrmLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>No</th>
+        <th>Ürün Adı</th>
+        <th>Alış Fiyatı</th>
+        <th>Satış Fiyatı</th>
+        <th>Stok Sayısı</th>
+        <th>Ürün Kodu</th>
+        <th>Kategori</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.ProductID</td>
+            <td>@item.ProductName</td>
+            <td>@item.ProductPurchasePrice</td>
+            <td>@item.ProductSalePrice</td>
+            <td>@item.ProductStock</td>
+            <td>@item.ProductCode</td>
+            <td>@item.Category.CategoryName</td>
+            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-outline-info">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="Product/AddProduct/" class="btn btn-outline-info">Yeni Ürün Girişi</a>
+
+
+
+
+
+

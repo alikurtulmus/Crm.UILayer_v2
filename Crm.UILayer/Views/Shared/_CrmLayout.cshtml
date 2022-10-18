@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+@Html.Partial("/Views/AdminLayout/PartialHead.cshtml")
+<body class="hold-transition sidebar-mini">
+    
+<div class="wrapper">
+
+@Html.Partial("/Views/AdminLayout/PartialNavbar.cshtml")
+
+@Html.Partial("/Views/AdminLayout/PartialSidebar.cshtml")
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- /.card -->
+                            @RenderBody()
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+
+@Html.Partial("/Views/AdminLayout/PartialFooter.cshtml")
+
+</div>
+
+@Html.Partial("/Views/AdminLayout/PartialScript.cshtml")
+
+</body>
+
+</html>
+
